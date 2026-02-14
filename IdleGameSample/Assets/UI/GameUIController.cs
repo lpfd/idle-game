@@ -12,28 +12,7 @@ public class GameUIController : MonoBehaviour
         _viewModel = new GameViewModel();
         _uiDocument = GetComponent<UIDocument>();
 
-        // 1. Get a reference to the root element
-        var root = _uiDocument.rootVisualElement;
-
-        // 2. Set the DataSource (this is the key for Data Binding)
-        root.dataSource = _viewModel;
-
-        // 3. Manually hook up the button click (Logic side)
-        var button = root.Q<Button>("Upgrade1");
-        if (button != null)
-        {
-            button.clicked += () => _viewModel.IncrementA();
-        }
-        button = root.Q<Button>("Upgrade2");
-        if (button != null)
-        {
-            button.clicked += () => _viewModel.IncrementB();
-        }
-        button = root.Q<Button>("Upgrade3");
-        if (button != null)
-        {
-            button.clicked += () => _viewModel.IncrementP();
-        }
+        _viewModel.BindTo(_uiDocument);
     }
 
     private void Update()

@@ -1,85 +1,50 @@
-using LeapForward.IdleHelpers;
+using Leap.Forward.IdleHelpers;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Unity.Properties;
 
-public class GameViewModel : INotifyPropertyChanged
+[IdleViewModel]
+public partial class GameViewModel : INotifyPropertyChanged
 {
     public GameViewModel()
     {
     }
 
+    [IdleProperty]
     private BigNumber _a = 1;
+
+    [IdleProperty]
     private BigNumber _b = 1;
+
+    [IdleProperty]
     private BigNumber _p = 1;
+
+    [IdleProperty]
     private BigNumber _score = 0;
 
-    [CreateProperty]
-    public BigNumber Score
+    [IdleProperty]
+    private bool canUpgrade1;
+
+    [PropertyUpdater]
+    void UpdateCanUpgrade1()
     {
-        get => _score;
-        set
-        {
-            if (_score != value)
-            {
-                _score = value;
-                OnPropertyChanged();
-            }
-        }
+        CanUpgrade1 = Score >= 20;
     }
 
-    [CreateProperty]
-    public BigNumber A
-    {
-        get => _a;
-        set
-        {
-            if (_a != value)
-            {
-                _a = value;
-                OnPropertyChanged();
-            }
-        }
-    }
 
-    [CreateProperty]
-    public BigNumber B
-    {
-        get => _b;
-        set
-        {
-            if (_b != value)
-            {
-                _b = value;
-                OnPropertyChanged();
-            }
-        }
-    }
-
-    [CreateProperty]
-    public BigNumber P
-    {
-        get => _p;
-        set
-        {
-            if (_p != value)
-            {
-                _p = value;
-                OnPropertyChanged();
-            }
-        }
-    }
-
+    [ClickHandler("Upgrade1")]
     public void IncrementA()
     {
         A += 1;
+        Score -= 20;
     }
 
+    [ClickHandler("Upgrade2")]
     public void IncrementB()
     {
         B += 1;
     }
 
+    [ClickHandler("Upgrade3")]
     public void IncrementP()
     {
         P += 1;
