@@ -1,5 +1,4 @@
 using LeapForward.IdleHelpers;
-using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Unity.Properties;
@@ -8,7 +7,6 @@ public class GameViewModel : INotifyPropertyChanged
 {
     public GameViewModel()
     {
-        
     }
 
     private BigNumber _a = 1;

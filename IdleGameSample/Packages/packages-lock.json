@@ -194,13 +194,13 @@
       "url": "https://packages.unity.com"
     },
     "leap.forward.idle.helpers": {
-      "version": "file:G:/Unity/idle-game/Modules/idle-helpers",
+      "version": "file:../../Modules/idle-helpers",
       "depth": 0,
       "source": "local",
       "dependencies": {}
     },
     "nl.kenney.uipack": {
-      "version": "file:G:/Unity/idle-game/Modules/kenney-uipack",
+      "version": "file:../../Modules/kenney-uipack",
       "depth": 0,
       "source": "local",
       "dependencies": {}
