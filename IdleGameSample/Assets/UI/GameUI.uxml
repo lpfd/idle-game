@@ -1,9 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ui:UXML
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ui="UnityEngine.UIElements"
-    xmlns:uie="UnityEditor.UIElements"
-    xsi:noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd"
->
-    
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Packages/nl.kenney.uipack/UIPack/Styles.uss?fileID=7433441132597879392&amp;guid=6b2ba52b893135e4bbb95e1628538ea0&amp;type=3#Styles"/>
+    <ui:TabView class="blue button_rectangle_flat" style="justify-content: flex-start; align-content: flex-start; height: 100%;">
+        <ui:Tab label="Game" style="height: auto;">
+            <ui:VisualElement style="flex-grow: 1; height: 100%; flex-direction: row;">
+                <ui:Label text="Score"/>
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; height: 100%; flex-direction: row;">
+                <ui:Label text="Value"/>
+                <ui:Button text="Upgrade" class="red button_rectangle_depth_gloss"/>
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; height: 100%; flex-direction: row;">
+                <ui:Label text="Value"/>
+                <ui:Button text="Upgrade" class="red button_rectangle_depth_gloss"/>
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1; height: 100%; flex-direction: row;">
+                <ui:Label text="Value"/>
+                <ui:Button text="Upgrade" class="red button_rectangle_depth_gloss"/>
+            </ui:VisualElement>
+        </ui:Tab>
+        <ui:Tab label="Help">
+            <ui:Label text="Some help text here...&#10;"/>
+        </ui:Tab>
+    </ui:TabView>
 </ui:UXML>

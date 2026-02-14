@@ -1,0 +1,6 @@
+[submodule "Modules/kenney-uipack"]
+	path = Modules/kenney-uipack
+	url = https://github.com/lpfd/kenney-uipack.git
+[submodule "Modules/idle-helpers"]
+	path = Modules/idle-helpers
+	url = https://github.com/lpfd/idle-helpers.git
