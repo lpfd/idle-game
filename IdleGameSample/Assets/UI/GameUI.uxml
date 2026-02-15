@@ -15,7 +15,11 @@
                         <ui:DataBinding property="text" data-source-path="A" binding-mode="ToTarget"/>
                     </Bindings>
                 </ui:Label>
-                <ui:Button text="Upgrade" name="Upgrade1" class="red button_rectangle_depth_gloss"/>
+                <ui:Button text="Upgrade" name="Upgrade1" class="red button_rectangle_depth_gloss">
+                    <Bindings>
+                        <ui:DataBinding property="enabledSelf" data-source-path="CanUpgrade1" binding-mode="ToTarget"/>
+                    </Bindings>
+                </ui:Button>
             </ui:VisualElement>
             <ui:VisualElement style="flex-grow: 1; height: 100%; flex-direction: row;">
                 <ui:Label text="Value">
